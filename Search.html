@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Search</title>
+</head>
+<body>
+    <form >
+        <span>類別</span>
+        <select id="s1">
+            <option value="0">(不拘)</option>
+            <option value="1">溫泉泡湯</option>
+            <option value="2">休閒娛樂</option>
+            <option value="3">樂園門票</option>
+            <option value="4">美食餐飲</option>
+            <option value="5">住宿卷</option>
+        </select>
+        <br>
+        <span>地區</span>
+        <select id="s2">
+            <option value="0">(不拘)</option>
+            <option value="1">北部</option>
+            <option value="2">東部</option>
+            <option value="3">南部</option>
+            <option value="4">中部</option>
+        </select>
+        <br>
+        <span>關鍵字</span>
+        <input type="text" id="s3">
+        <button type="submit" onclick="search();return false;">修改</button>
+    </form>
+    <p>value : <span id = "answer"></span></p>
+</body>
+<script src="Search.js"></script>
+<script>
+    function search(e){
+        
+        var x  = parseInt(document.getElementById("s1").value);
+        var y = parseInt(document.getElementById("s2").value);
+        var z = document.getElementById("s3").value;
+        var myKeyword = "";
+        if(z.length == 0) {
+            myKeyword = "";
+        }else {
+            myKeyword = '(' + z + ')';
+        }
+        console.log(myKeyword + s2Search[y].s2Desc + s1Search[x].s1Desc);
+        var myAnswer = myKeyword + s2Search[y].s2Desc + s1Search[x].s1Desc;
+        document.getElementById("answer").innerText = myAnswer;
+    }
+</script>
+</html>
