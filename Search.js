@@ -8,9 +8,9 @@ var s1Search = [
 ];
 
 var s2Search = [
-{"s2Desc":""},
-{"s2Desc":"(北部)"},
-{"s2Desc":"(東部)"},
-{"s2Desc":"(南部)"},
-{"s2Desc":"(中部)"}
+    {"s2Desc":""},
+    {"s2Desc":"(北部)"},
+    {"s2Desc":"(東部)"},
+    {"s2Desc":"(南部)"},
+    {"s2Desc":"(中部)"}
 ];
