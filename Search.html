@@ -49,6 +49,35 @@
         console.log(myKeyword + s2Search[y].s2Desc + s1Search[x].s1Desc);
         var myAnswer = myKeyword + s2Search[y].s2Desc + s1Search[x].s1Desc;
         document.getElementById("answer").innerText = myAnswer;
+        document.title = myAnswer;
+
+        // 方法1 修改參數
+        var myContStr = `https://ticket.settour.com.tw/search?ctp=1&p1p=${x}&p2p=${y}&st=SD`;
+        console.log(myContStr);
+
+        // 方法2 沒有選項，不放入參數
+        var myp1pStr = "";
+        var myp2pStr = "";
+        var myContStr_2 = "https://ticket.settour.com.tw/search?ctp=1";
+        if (x == 0){
+            myp1pStr = "";
+        }else {
+            myp1pStr =  "p1p=" + x;
+            myContStr_2 += '&' + myp1pStr;
+        }
+        if (y == 0){
+            myp2pStr = "";
+        }else {
+            myp2pStr =  "p2p=" + y;
+            myContStr_2 += '&' + myp2pStr;
+        }
+        
+        console.log("myp1pStr : " + myp1pStr);
+        console.log("myp2pStr : " + myp2pStr);
+
+        myContStr_2 += "&st=SD";
+        console.log(myContStr_2);
+
     }
 </script>
 </html>
